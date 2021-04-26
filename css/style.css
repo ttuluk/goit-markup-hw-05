@@ -17,6 +17,7 @@
     0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   --background-hero: rgba(47, 48, 58, 0.8);
   --icon-color: rgba(175, 177, 184, 1);
+  --overlay-bg-color: rgba(33, 150, 243, 0.9);
 }
 /*тип блочной модели*/
 html {
@@ -614,6 +615,7 @@ img {
 }
 
 .card-set .galery-item {
+  overflow: hidden;
   display: flex;
   flex-basis: calc((100% - 3 * 30px) / 3);
   margin-right: 30px;
@@ -630,12 +632,15 @@ img {
   margin-right: 0;
 }
 .galery-item > .galery-card {
+  display: block;
+  position: relative;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
   margin-top: 0;
   margin-bottom: 0;
 }
+
 .galery-card-text {
   border-right: 1px solid var(--border-portfolio-color);
   border-bottom: 1px solid var(--border-portfolio-color);
@@ -651,4 +656,30 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-text-color);
+}
+
+/*overlay-portfolio*/
+
+.galery-overlay {
+  position: absolute;
+  background-color: var(--overlay-bg-color);
+  width: 100%;
+  height: 294px;
+  top: 0;
+  padding: 63px 24px;
+  visibility: hidden;
+  overlay: 0;
+}
+
+.galery-item:hover .galery-overlay {
+  overlay: 1;
+  visibility: visible;
+}
+
+.galery-overlay-text {
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #fff;
+  text-align: left;
 }
