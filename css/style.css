@@ -15,7 +15,7 @@
   --prime-card-swadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   --secondary-card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  --background-hero: rgba(47, 48, 58, 0.4);
+  --background-hero: rgba(47, 48, 58, 0.8);
   --icon-color: rgba(175, 177, 184, 1);
 }
 /*тип блочной модели*/
@@ -340,19 +340,45 @@ button {
 
 .works {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-wrap: no-wrap;
+  justify-content: center;
 }
-.works .item {
-  display: flex;
+.works-item {
+  position: relative;
   margin-right: 30px;
+  flex-basis: calc((100% - 3 * 30px) / 3);
 }
 .works .item:last-child {
   margin-right: 0;
 }
 img {
   display: block;
-  max-width: 100%;
+}
+.works-item {
+  position: relative;
+}
+
+.works-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+
+  background-color: var(--background-hero);
+  opacity: 1;
+}
+
+.works-text {
+  padding-top: 27px;
+  color: var(--primary-bg-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.44;
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 /*наша команда*/
