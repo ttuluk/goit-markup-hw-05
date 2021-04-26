@@ -60,6 +60,20 @@ body {
   margin-top: 0;
   margin-bottom: 0;
 }
+.site-nav-link {
+  position: relative;
+}
+.current::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-text-color);
+  margin-top: 28px;
+  opacity: 1;
+}
 
 /*шапка*/
 .page-header {
