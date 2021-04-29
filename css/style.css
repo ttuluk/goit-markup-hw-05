@@ -10,6 +10,7 @@
   --footer-social-color: rgba(255, 255, 255, 0.1);
   --button-bg-color: rgba(245, 244, 250, 1);
   --border-color: rgba(236, 236, 236, 1);
+  --border-icon-color: rgba(0, 0, 0, 0.1);
   --border-team-color: rgba(255, 255, 255, 1);
   --border-portfolio-color: rgba(238, 238, 238, 1);
   --prime-card-swadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -221,6 +222,9 @@ p {
   background-size: cover;
   background-position: center;
 }
+
+/*Модальное окно*/
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -228,10 +232,13 @@ p {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  z-index: 100;
 }
+
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;i
 }
 
 .modal-overlay {
@@ -239,22 +246,30 @@ p {
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
-
   min-width: 528px;
   min-height: 581px;
+  padding: 8px;
   background-color: var(--primary-bg-color);
 }
 
 .close {
-  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  margin-top: 8px;
+  margin-right: 8px;
   width: 30px;
   height: 30px;
-  background-image: url(/images/icons/close.svg);
-  padding: 0;
-  background-position: end;
-  background-repeat: no-repeat;
-  background-size: contain;
+  text-align: center;
   background-color: var(--primary-bg-color);
+  border: 1px solid var(--border-icon-color);
+  border-radius: 100%;
+}
+.modal-icon-close {
+  width: 11px;
+  height: 11px;
+  fill: var(--title-text-color);
 }
 
 .hero-title {
@@ -282,6 +297,7 @@ button {
   color: inherit;
   padding: 10px 30px;
 }
+
 .hero .button {
   background-color: var(--accent-text-color);
   color: var(--secondary-text-color);
@@ -292,8 +308,6 @@ button {
   text-align: center;
   border: 1px solid transparent;
   border-radius: 4px;
-
-  transition: background-color 250ms ccubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -483,13 +497,15 @@ img {
   border-radius: 50%;
   background-color: var(--primary-bg-color);
 
-  transition: background-color 250ms ccubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
   fill: var(--icon-color);
   width: 20px;
   height: 20px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover .social-icon,
@@ -524,7 +540,7 @@ img {
   border-radius: 4px;
   border: 1px solid #afb1b8;
 
-  transition: border-color 250ms ccubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-svg {
   display: flex;
@@ -534,7 +550,7 @@ img {
   width: 88px;
   height: 52px;
 
-  transition: fill 250ms ccubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover .clients-svg,
@@ -608,6 +624,7 @@ img {
 }
 .footer-social-link {
   background-color: var(--footer-social-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-icon {
   fill: var(--primary-bg-color);
@@ -640,7 +657,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
 
-  transition: background-color 250ms ccubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-all {
   background-color: var(--accent-text-color);
