@@ -19,6 +19,7 @@
   --background-hero: rgba(47, 48, 58, 0.8);
   --icon-color: rgba(175, 177, 184, 1);
   --overlay-bg-color: rgba(33, 150, 243, 0.9);
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*тип блочной модели*/
 html {
@@ -61,7 +62,11 @@ body {
   cursor: pointer;
   margin-top: 0;
   margin-bottom: 0;
+  color: var(--prime-text-color);
+
+  transition: color var(--animation);
 }
+
 .site-nav-link {
   position: relative;
 }
@@ -100,10 +105,13 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+
+  transition: color var(--animation);
 }
 
 .logo {
   color: var(--accent-text-color);
+  transition: color var(--animation);
 }
 
 /*ссылки активные*/
@@ -258,7 +266,7 @@ p {
   background-color: var(--primary-bg-color);
 
   transform: translate(50%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--animation);
 }
 
 .close {
@@ -304,6 +312,9 @@ button {
   font: inherit;
   color: inherit;
   padding: 10px 30px;
+
+  transition: background-color var(--animation) color var(--animation)
+    box-shadow var(--animation);
 }
 
 .hero .button {
@@ -317,8 +328,8 @@ button {
   text-align: center;
   border: 1px solid transparent;
   border-radius: 4px;
-  transitional: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: background-color var(--animation);
 }
 
 .button:hover,
@@ -511,25 +522,27 @@ img {
   border-radius: 50%;
   background-color: var(--primary-bg-color);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--animation);
 }
 
 .social-icon {
   fill: var(--icon-color);
   width: 20px;
   height: 20px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: fill var(--animation);
 }
 
 .social-link:hover .social-icon,
 .social-link:focus .social-icon {
   fill: var(--primary-bg-color);
 }
+
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-text-color);
 }
+
 /*постоянные клиенты*/
 .clients-list {
   display: flex;
@@ -553,9 +566,9 @@ img {
   height: 92px;
   border-radius: 4px;
   border: 1px solid #afb1b8;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--animation);
 }
+
 .clients-svg {
   display: flex;
   fill: var(--icon-color);
@@ -564,7 +577,7 @@ img {
   width: 88px;
   height: 52px;
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--animation);
 }
 
 .clients-link:hover .clients-svg,
@@ -591,7 +604,10 @@ img {
 .footer .link-logo {
   padding: 0;
   color: var(--secondary-text-color);
+
+  transition: color var(--animation);
 }
+
 .footer-text {
   text-transform: uppercase;
   font-weight: 700;
@@ -612,9 +628,13 @@ img {
 }
 .address-link {
   color: var(--secondary-text-color);
+
+  transition: color var(--animation);
 }
 .footer-link {
   color: var(--footer-text-color);
+
+  transition: color var(--animation);
 }
 .footer-box {
   display: flex;
@@ -637,10 +657,13 @@ img {
 }
 .footer-social-link {
   background-color: var(--footer-social-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: background-color var(--animation);
 }
 .footer-icon {
   fill: var(--primary-bg-color);
+
+  transition: fill var(--animation);
 }
 
 /*сss для портфолио*/
@@ -663,26 +686,30 @@ filter-item:first-child {
   padding: 6px 22px;
   border: 1px solid transparent;
   border-radius: 4px;
+  padding-top: 6px;
 
-  color: var(--title-text-color);
   background-color: var(--button-bg-color);
-
+  color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--animation) color var(--animation)
+    box-shadow var(--animation);
 }
+
 .filter-all {
   background-color: var(--accent-text-color);
   color: var(--secondary-text-color);
+
+  transition: background-color var(--animation) color var(--animation)
+    box-shadow var(--animation);
 }
 
 .filter-button:hover,
 .filter-button:focus {
-  padding-top: 6px;
   background-color: var(--accent-text-color);
   color: var(--secondary-text-color);
   cursor: pointer;
@@ -716,6 +743,8 @@ filter-item:first-child {
   margin-top: 0;
   margin-bottom: 0;
   box-shadow: none;
+
+  transition: box-shadow var(--animation);
 }
 
 .galery-card:hover,
