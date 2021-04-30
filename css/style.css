@@ -240,8 +240,8 @@ p {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  visibility: hidden;
 }
+
 .backdrop.is-hidden .modal-overlay {
   transform: translate(50%, -50%) scale(0.3);
 }
