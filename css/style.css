@@ -73,7 +73,7 @@ body {
   height: 4px;
   border-radius: 2px;
   background-color: var(--accent-text-color);
-  margin-top: 28px;
+  margin-top: 27px;
   opacity: 1;
 }
 
@@ -139,11 +139,11 @@ body {
 }
 
 .site-nav > .item {
-  margin-right: 50px;
+  margin-left: 50px;
 }
 
-.site-nav > .item:last-child {
-  margin-right: 0;
+.site-nav > .item:first-child {
+  margin-left: 0;
 }
 
 .site-nav .link {
@@ -285,7 +285,6 @@ p {
   display: inline-block;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 30px;
   padding-left: 30px;
   padding-right: 30px;
 
@@ -311,6 +310,7 @@ button {
   background-color: var(--accent-text-color);
   color: var(--secondary-text-color);
   min-width: 200px;
+  margin-top: 30px;
   font-weight: 900;
   font-size: 16px;
   line-height: 1.87;
@@ -358,7 +358,7 @@ button {
 .card-set {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
+  margin-left: -30px;
   margin-top: -30px;
 }
 
@@ -366,12 +366,12 @@ button {
   display: flex;
   flex-direction: column;
   width: calc((100% - 4 * 30px) / 4);
-  margin-right: 30px;
+  margin-left: 30px;
   margin-top: 30px;
 }
 
-.card-set .features-item:nth-child(4n + 4) {
-  margin-right: 0;
+.card-set .features-item:nth-child(4n + 1) {
+  margin-left: 0;
 }
 .features-image {
   display: flex;
@@ -381,12 +381,11 @@ button {
   height: 120px;
   background-color: var(--secondary-bg-color);
   border-radius: 4px;
-  margin-bottom: 30px;
 }
 
 .features-title {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-top: 30px;
   color: var(--title-text-color);
   width: 270px;
   font-style: normal;
@@ -395,6 +394,9 @@ button {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+.features-text {
+  margin-top: 10px;
 }
 
 /*чем мы занимаемся*/
@@ -410,11 +412,11 @@ button {
 .works-item {
   display: flex;
   position: relative;
-  margin-right: 30px;
+  margin-left: 30px;
   flex-basis: calc((100% - 3 * 30px) / 3);
 }
-.works .item:last-child {
-  margin-right: 0;
+.works .item:nth-child(3n + 1) {
+  margin-left: 0;
 }
 img {
   display: block;
@@ -454,7 +456,7 @@ img {
 .card-set {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
+  margin-left: -30px;
   margin-top: -30px;
 }
 
@@ -462,15 +464,15 @@ img {
   display: flex;
   flex-direction: column;
   flex-basis: calc((100% - 4 * 30px) / 4);
-  margin-right: 30px;
+  margin-left: 30px;
   margin-top: 30px;
   text-align: center;
   background-color: var(--secondary-text-color);
   border-radius: 0px 0px 4px 4px;
   box-shadow: var(--secondary-card-shadow);
 }
-.card-set .team-item:nth-child(4n + 4) {
-  margin-right: 0;
+.card-set .team-item:nth-child(4n + 1) {
+  margin-left: 0;
 }
 
 .team-card-text {
@@ -494,10 +496,10 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 10px;
+  margin-left: 10px;
 }
-.social-item:last-child {
-  margin-right: 0;
+.social-item:first-child {
+  margin-left: 0;
 }
 
 .social-link {
@@ -537,11 +539,11 @@ img {
 
 .clients-item {
   display: flex;
-  margin-right: 30px;
+  margin-left: 30px;
 }
 
-.clients-item:last-child {
-  margin-right: 0;
+.clients-item:first-child {
+  margin-left: 0;
 }
 .clients-link {
   display: flex;
@@ -602,11 +604,11 @@ img {
   margin-top: 20px;
 }
 .contacts-item {
-  margin-bottom: 9px;
+  margin-top: 9px;
 }
 
-.contacts-item:last-child {
-  margin-bottom: 0;
+.contacts-item:first-child {
+  margin-top: 0;
 }
 .address-link {
   color: var(--secondary-text-color);
@@ -622,7 +624,6 @@ img {
 .address-box {
   display: flex;
   width: 231px;
-  margin-right: 70px;
 }
 .social-go {
   display: flex;
@@ -646,7 +647,6 @@ img {
 .container .filter-list {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
@@ -654,7 +654,10 @@ img {
 
 .filter-item {
   display: flex;
-  margin-right: 8px;
+  margin-left: 8px;
+}
+filter-item:first-child {
+  margin-left: 0;
 }
 .filter-button {
   padding: 6px 22px;
@@ -686,24 +689,21 @@ img {
   box-shadow: var(--prime-card-swadow);
 }
 
-.filter-button:last-child {
-  margin-right: 0;
-}
-
 .card-set {
   display: flex;
+  margin-top: 20px;
   flex-basis: calc((100% - 3 * 30px) / 3);
 }
 
 .galery-item {
   display: flex;
-  margin-right: 30px;
+  margin-left: 30px;
   margin-top: 30px;
   cursor: pointer;
 }
 
-.card-set .galery-item:nth-child(3n + 3) {
-  margin-right: 0;
+.card-set .galery-item:nth-child(3n + 1) {
+  margin-left: 0;
 }
 
 .galery-card {
