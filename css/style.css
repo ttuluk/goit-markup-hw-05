@@ -721,10 +721,13 @@ img {
 }
 
 .galery-card-text {
+  position: relative;
   border-right: 1px solid var(--border-portfolio-color);
   border-bottom: 1px solid var(--border-portfolio-color);
   border-left: 1px solid var(--border-portfolio-color);
   padding: 20px 24px;
+  background-color: var(--primary-bg-color);
+  z-index: 2;
 }
 
 .galery-title {
