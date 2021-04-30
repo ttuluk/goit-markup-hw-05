@@ -408,6 +408,7 @@ button {
   justify-content: center;
 }
 .works-item {
+  display: flex;
   position: relative;
   margin-right: 30px;
   flex-basis: calc((100% - 3 * 30px) / 3);
@@ -425,6 +426,7 @@ img {
 .works-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -435,7 +437,6 @@ img {
 }
 
 .works-text {
-  padding-top: 27px;
   color: var(--primary-bg-color);
   font-weight: 700;
   font-size: 14px;
