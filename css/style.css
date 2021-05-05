@@ -302,6 +302,7 @@ p {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
@@ -381,9 +382,6 @@ button {
   margin-top: 30px;
 }
 
-.card-set .features-item:nth-child(4n + 1) {
-  margin-left: 0;
-}
 .features-image {
   display: flex;
   justify-content: center;
@@ -464,13 +462,6 @@ img {
   background-color: var(--secondary-bg-color);
 }
 
-.card-set {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
-}
-
 .card-set .team-item {
   display: flex;
   flex-direction: column;
@@ -481,9 +472,6 @@ img {
   background-color: var(--secondary-text-color);
   border-radius: 0px 0px 4px 4px;
   box-shadow: var(--secondary-card-shadow);
-}
-.card-set .team-item:nth-child(4n + 1) {
-  margin-left: 0;
 }
 
 .team-card-text {
@@ -673,6 +661,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .filter-item {
@@ -696,7 +685,7 @@ filter-item:first-child {
   text-align: center;
   letter-spacing: 0.03em;
 
-  transition: background-color var(--animation) color var(--animation)
+  transition: background-color var(--animation), color var(--animation),
     box-shadow var(--animation);
 }
 
@@ -716,9 +705,10 @@ filter-item:first-child {
   box-shadow: var(--prime-card-swadow);
 }
 
-.card-set {
+.card-set .galery-list {
   display: flex;
-  margin-top: 20px;
+  margin-top: -30px;
+  margin-left: -30px;
   flex-basis: calc((100% - 3 * 30px) / 3);
 }
 
@@ -727,10 +717,6 @@ filter-item:first-child {
   margin-left: 30px;
   margin-top: 30px;
   cursor: pointer;
-}
-
-.card-set .galery-item:nth-child(3n + 1) {
-  margin-left: 0;
 }
 
 .galery-card {
